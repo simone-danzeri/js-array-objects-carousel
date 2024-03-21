@@ -79,6 +79,8 @@ nextArrow.addEventListener('click', function() {
     // Incremento activeItem di uno
     if(activeItem < allImages.length - 1) {
         activeItem++;
+    } else {
+        activeItem = 0;
     }
     // Aggiungo classe active al nuovo activeItem
     allImages[activeItem].classList.add('active');
@@ -93,6 +95,8 @@ previousArrow.addEventListener('click', function() {
         // Riduco activeItem di uno
         if(activeItem > 0) {
             activeItem--;
+        } else {
+            activeItem = allImages.length - 1;
         }
         // Aggiungo classe active al nuovo activeItem
         allImages[activeItem].classList.add('active');
