@@ -41,12 +41,12 @@ img{
     position: absolute;
     color: antiquewhite;
     right: 10px;
-    bottom: 25px;
+    bottom: 50px;
 }
 #image-text{
     position: absolute;
     color: antiquewhite;
-    right: 10px;
+    left: 5px;
     bottom: 5px;
 }
 /* IMG-SECTION */
