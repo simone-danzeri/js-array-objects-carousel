@@ -104,3 +104,4 @@ previousArrow.addEventListener("click", function () {
   allImages[activeItem].classList.add("active");
   allThumbnails[activeItem].classList.add("active");
 });
+
