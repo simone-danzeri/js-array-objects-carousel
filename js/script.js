@@ -70,4 +70,32 @@ allImages[activeItem].classList.add('active');
 const allThumbnails = document.querySelectorAll('.thumbnail');
 allThumbnails[activeItem].classList.add('active');
 // Faccio funzionare le frecce
+// Freccia per elemento successivo
 const nextArrow = document.querySelector('.arrow.down');
+nextArrow.addEventListener('click', function() {
+    // Al click rimuovo la classe active all'elemento che aveva la classe active
+    document.querySelector('.image.active').classList.remove('active');
+    document.querySelector('.thumbnail.active').classList.remove('active');
+    // Incremento activeItem di uno
+    if(activeItem < allImages.length - 1) {
+        activeItem++;
+    }
+    // Aggiungo classe active al nuovo activeItem
+    allImages[activeItem].classList.add('active');
+    allThumbnails[activeItem].classList.add('active');
+});
+// Freccia per elemento precedente
+const previousArrow = document.querySelector('.arrow.up');
+previousArrow.addEventListener('click', function() {
+        // Al click rimuovo la classe active all'elemento che aveva la classe active
+        document.querySelector('.image.active').classList.remove('active');
+        document.querySelector('.thumbnail.active').classList.remove('active');
+        // Riduco activeItem di uno
+        if(activeItem > 0) {
+            activeItem--;
+        }
+        // Aggiungo classe active al nuovo activeItem
+        allImages[activeItem].classList.add('active');
+        allThumbnails[activeItem].classList.add('active');
+        
+});
