@@ -47,8 +47,9 @@ images.forEach((eachImage) => {
     let newImage = eachImage.image;
     let newTitle = eachImage.title;
     let newText = eachImage.text;
+    // Images
     imagesContainer.innerHTML += `
-    <div class="image active">
+    <div class="image">
         <h3 id="image-title">${newTitle}</h3>
         <p id="image-text">${newText}</p>
         <img src="${newImage}" alt="">
@@ -56,8 +57,17 @@ images.forEach((eachImage) => {
     `;
     // Thumbnails
     thumbnailsContainer.innerHTML += `
-    <div class="thumbnail active"> 
+    <div class="thumbnail"> 
         <img src="${newImage}" alt="">
     </div>
     `;
 });
+
+// Aggiungo la classe active alla prima immagine ed alla prima thumbnail
+let activeItem = 0;
+const allImages = document.querySelectorAll('.image');
+allImages[activeItem].classList.add('active');
+const allThumbnails = document.querySelectorAll('.thumbnail');
+allThumbnails[activeItem].classList.add('active');
+// Faccio funzionare le frecce
+const nextArrow = document.querySelector('.arrow.down');
