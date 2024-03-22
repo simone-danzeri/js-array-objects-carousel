@@ -72,7 +72,14 @@ allThumbnails[activeItem].classList.add("active");
 // Faccio funzionare le frecce
 // Freccia per elemento successivo
 const nextArrow = document.querySelector(".arrow.down");
-nextArrow.addEventListener("click", function () {
+nextArrow.addEventListener("click", showNextImage);
+// Freccia per elemento precedente
+const previousArrow = document.querySelector(".arrow.up");
+previousArrow.addEventListener("click", showPreviousImage);
+
+// FUNCTIONS
+
+function showNextImage() {
   // Al click rimuovo la classe active all'elemento che aveva la classe active
   document.querySelector(".image.active").classList.remove("active");
   document.querySelector(".thumbnail.active").classList.remove("active");
@@ -86,10 +93,9 @@ nextArrow.addEventListener("click", function () {
   // Aggiungo classe active al nuovo activeItem
   allImages[activeItem].classList.add("active");
   allThumbnails[activeItem].classList.add("active");
-});
-// Freccia per elemento precedente
-const previousArrow = document.querySelector(".arrow.up");
-previousArrow.addEventListener("click", function () {
+}
+
+function showPreviousImage() {
   // Al click rimuovo la classe active all'elemento che aveva la classe active
   document.querySelector(".image.active").classList.remove("active");
   document.querySelector(".thumbnail.active").classList.remove("active");
@@ -103,5 +109,4 @@ previousArrow.addEventListener("click", function () {
   // Aggiungo classe active al nuovo activeItem
   allImages[activeItem].classList.add("active");
   allThumbnails[activeItem].classList.add("active");
-});
-
+}
