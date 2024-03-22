@@ -49,11 +49,13 @@ images.forEach((eachImage) => {
   let newText = eachImage.text;
   // Images
   imagesContainer.innerHTML += `
-    <div class="image">
-        <h3 id="image-title">${newTitle}</h3>
-        <p id="image-text">${newText}</p>
-        <img src="${newImage}" alt="">
+  <div class="image">
+    <div class="single-image-text">
+      <h3 id="image-title">${newTitle}</h3>
+      <p id="image-text">${newText}</p>
     </div>
+    <img src="${newImage}" alt="">
+  </div>
     `;
   // Thumbnails
   thumbnailsContainer.innerHTML += `
